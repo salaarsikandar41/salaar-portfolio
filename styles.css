@@ -372,5 +372,32 @@ input:focus, textarea:focus{
 }
 @media (min-width: 820px){
   .qrrow{ grid-template-columns: 0.42fr 0.58fr; align-items: start; }
+  .gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.shot{
+  display:block;
+  border-radius: 16px;
+  overflow:hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.shot img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.shot:hover{
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  border-color: rgba(255,255,255,0.18);
+}
+
 }
 
